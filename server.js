@@ -1,5 +1,3 @@
-fetch('troops.json').then(response => response.json()).then(data => {
-    console.log(data)
-    troops = data;
-        
+fetch('troops.json').then(response => response.json()).then(troops => {
+    console.log(troops)
 })
