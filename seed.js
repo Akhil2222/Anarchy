@@ -6,10 +6,10 @@ function genval(code,len){
     var recent = code
     console.log(recent)
     var codes = []
-
+    var multiplier = parseInt(code[0],36)
     for(var i = 0;i < len;i++){
-        console.log(parseInt(recent,36).toString(16).length)
-        recent = ((parseInt(recent,36)+(parseInt(recent.slice(3),36)**2))%16**10).toString(36)
+        
+        recent = (multiplier*parseInt(recent,36) % 16**11).toString(36)
         codes.push(recent)
     }
     return codes
